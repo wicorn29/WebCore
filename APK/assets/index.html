@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vital</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<h1>Wicorn29 WebCore Vitals</h1>
+<ul>
+  <li><strong>User Agent:</strong> <span id="userAgent"></span></li>
+  <li><strong>Screen Resolution:</strong> <span id="screenResolution"></span></li>
+  <li><strong>Available Screen Width:</strong> <span id="availScreenWidth"></span></li>
+  <li><strong>Available Screen Height:</strong> <span id="availScreenHeight"></span></li>
+  <li><strong>Color Depth:</strong> <span id="colorDepth"></span></li>
+  <li><strong>Pixel Depth:</strong> <span id="pixelDepth"></span></li>
+  <li><strong>Browser:</strong> <span id="browser"></span></li>
+  <li><strong>Browser Version:</strong> <span id="browserVersion"></span></li>
+  <li><strong>Platform:</strong> <span id="platform"></span></li>
+  <li><strong>Language:</strong> <span id="language"></span></li>
+  <li><strong>Cookies Enabled:</strong> <span id="cookiesEnabled"></span></li>
+  <li><strong>Local Storage:</strong> <span id="localStorage"></span></li>
+  <li><strong>Session Storage:</strong> <span id="sessionStorage"></span></li>
+  <li><strong>Online:</strong> <span id="online"></span></li>
+  <li><strong>Geolocation:</strong> <span id="geolocation"></span></li>
+  <li><strong>Do Not Track:</strong> <span id="doNotTrack"></span></li>
+</ul>
+
+<script>
+  document.getElementById("userAgent").textContent = navigator.userAgent;
+  document.getElementById("screenResolution").textContent = screen.width + "x" + screen.height;
+  document.getElementById("availScreenWidth").textContent = screen.availWidth;
+  document.getElementById("availScreenHeight").textContent = screen.availHeight;
+  document.getElementById("colorDepth").textContent = screen.colorDepth + " bits";
+  document.getElementById("pixelDepth").textContent = screen.pixelDepth + " bits";
+  document.getElementById("browser").textContent = navigator.appName;
+  document.getElementById("browserVersion").textContent = navigator.appVersion;
+  document.getElementById("platform").textContent = navigator.platform;
+  document.getElementById("language").textContent = navigator.language;
+  document.getElementById("cookiesEnabled").textContent = navigator.cookieEnabled ? "Yes" : "No";
+  document.getElementById("localStorage").textContent = window.localStorage ? "Supported" : "Not Supported";
+  document.getElementById("sessionStorage").textContent = window.sessionStorage ? "Supported" : "Not Supported";
+  document.getElementById("online").textContent = navigator.onLine ? "Yes" : "No";
+  document.getElementById("geolocation").textContent = navigator.geolocation ? "Supported" : "Not Supported";
+  document.getElementById("doNotTrack").textContent = navigator.doNotTrack ? "Enabled" : "Disabled";
+</script>
+</body>
+</html>
