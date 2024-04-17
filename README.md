@@ -6,3 +6,10 @@ Here's a sample command you can run in `ADB` that shows disgnostics information 
 
 ```bash
 adb shell am start -n com.wicorn29.webcore/.MainActivity
+```
+
+<p>You can show disgnostics information by going to this URL in your browser (not working right now)</p>
+
+```html
+webview://launch/main_activity
+```
